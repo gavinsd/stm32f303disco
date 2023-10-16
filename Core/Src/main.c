@@ -146,7 +146,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	/* USER CODE END WHILE */
+	  /* USER CODE BEGIN 3 */
 	  if (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_SET) {
 		  /* Toggle the state between ON and OFF */
 		  if (state == OFF) {
@@ -154,7 +154,7 @@ int main(void)
 		  } else {
 			  state = OFF;
 		  }
-		  /* Delay to debouncer the button press */
+		  /* Delay to debounce the button press */
 		  HAL_Delay(200);
 	  }
 
@@ -162,10 +162,12 @@ int main(void)
 	  if (state == ON) {
 		  led_round_lights();
 	  }
-    /* USER CODE BEGIN 3 */
+	  /* USER CODE END 3 */
+
   }
-  /* USER CODE END 3 */
+
 }
+/* USER CODE END WHILE */
 
 /**
   * @brief System Clock Configuration
